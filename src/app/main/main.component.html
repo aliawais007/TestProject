@@ -1,0 +1,39 @@
+<div class="container-fluid" style="margin-top: -3px;">
+  <div class="row">
+    <div class="card">
+      <img class="card-img-top" src="assets/slider_1.jpg" width="100%" alt="Card image">
+      <div class="card-img-overlay">
+        <div class="container" style="width: 70%; padding: 50px">
+          <div class="row">
+            <div class="col-6 text-center">
+              <h1 class="card-title" style="font-size: 50px;">
+                <strong style="color: white">Spring & Summer Collection 2019</strong>
+              </h1>
+              <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top: 30px;" *ngFor="let category of categories">
+    <div class="card-header" style="background-color: rgb(210, 215, 219)">
+      <strong>FEATURED COLLECTION {{category.name | uppercase}}</strong>
+    </div>
+    <div class="card-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="card col-4"  *ngFor="let product of category.products">
+            <div class="card-header"  style="background-color: rgb(210, 215, 219)">{{product.name}}</div>
+            <img class="card-img-top" src="assets/a.jpg" alt="Card image">
+            <div class="card-body">
+              <p class="card-text">Price Rs. {{product.price}}</p>
+              <p class="card-text">Items in Stock {{product.stock}}</p>
+              <a href="#" class="btn btn-primary">View This Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header"><strong>All Categories of Company {{company['name'] }} of {{company['country']}}</strong></div>
+        <div class="card-body">
+          <a class="card col-6"  *ngFor="let companyCategory of companyCategories" href="/CategoryProducts/{{companyCategory.id}}">
+            <img class="card-img-top" src="assets/a.jpg" height="300px" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">{{companyCategory.name}}</h4>
+              <p class="card-text">{{companyCategory.description}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+</div>
+
