@@ -14,6 +14,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { CompanyCategoriesComponent } from './company-categories/company-categories.component';
 import { CategoryProductsComponent } from './category-products/category-products.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
+import { CompanyComponent } from './company/company.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductsComponent } from './products/products.component';
+import { OrdersComponent } from './orders/orders.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +33,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CompanyCategoriesComponent,
     CategoryProductsComponent,
     DashboardComponent,
+    DashboardHomeComponent,
+    CompanyComponent,
+    CategoryComponent,
+    ProductsComponent,
+    OrdersComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,

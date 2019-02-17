@@ -8,6 +8,13 @@ import { UserComponent } from './user/user.component';
 import { MainComponent } from './main/main.component';
 import { CompanyCategoriesComponent } from './company-categories/company-categories.component';
 import { CategoryProductsComponent } from './category-products/category-products.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
+import { CompanyComponent } from './company/company.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductsComponent } from './products/products.component';
+import { OrdersComponent } from './orders/orders.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   { path: "", redirectTo:"/home", pathMatch: "full"},
@@ -33,7 +40,18 @@ const routes: Routes = [
     { path: "", component: UserComponent, children:[
       { path: "", component: SignupComponent}
     ]}
+  ]},
+  { path: "dashboard", component: DashboardComponent, children:[
+    { path: "", redirectTo: "dashboardHome", pathMatch:"full"},
+    { path: "dashboardHome", component: DashboardHomeComponent},
+    { path: "company", component: CompanyComponent},
+    { path: "category", component: CategoryComponent},
+    { path: "product", component: ProductsComponent},
+    { path: "orders", component: OrdersComponent},
+    { path: "settings", component: SettingsComponent},
+
   ]}
+
 ];
 
 @NgModule({
